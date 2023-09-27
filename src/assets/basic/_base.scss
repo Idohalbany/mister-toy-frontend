@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html {
+  letter-spacing: 0.48px;
+  line-height: 1.13;
+}
+
+body {
+  margin: 0;
+  background-color: $clr5;
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0 0.5em;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+a:hover {
+  color: var(--clr2bg);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+  max-width: 100%;
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+  outline: 1px solid gold;
+}
+

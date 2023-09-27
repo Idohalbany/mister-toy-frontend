@@ -8,7 +8,7 @@ import { ToyIndex } from './pages/ToyIndex'
 import { ToyDetails } from './pages/ToyDetails'
 import { ToyEdit } from './pages/ToyEdit'
 import { Dashboard } from './pages/Dashboard'
-import './App.css'
+import './assets/App.scss'
 
 export function App() {
   return (

@@ -1,0 +1,72 @@
+.home-page {
+  color: $clr3;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 10em auto;
+}
+
+.hero-section {
+  h1 {
+    margin: 1em auto;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.features-section {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+  margin: 2em 0em;
+  gap: 2em;
+  font-size: 1rem;
+
+  .feature {
+    flex: 1;
+    padding: 1em;
+    border: 1px solid $clr4;
+    background-color: $clr3;
+    color: $clr2;
+  }
+}
+
+.label-section {
+  padding: 1em;
+  h2 {
+    margin: 1em auto 2em;
+    font-size: 2rem;
+  }
+}
+
+.labels-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 1em;
+
+  .label-item {
+    background-color: $clr1;
+    color: $clr3;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+}
+
+.cta-section {
+  margin: 4em auto;
+  h2 {
+    margin: 1em auto 2em;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
