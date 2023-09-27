@@ -1,0 +1,62 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: $clr3;
+  text-align: center;
+  text-transform: capitalize;
+  div h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 3em auto 1.5em;
+  }
+
+  button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: $clr1;
+    color: $clr3;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $clr3;
+      color: $clr1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .title-content-about {
+    margin-top: 1.5em;
+  }
+
+  .about-content {
+    font-size: 1.1rem;
+    padding: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-us {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    div button {
+      font-size: 0.9rem;
+      margin-bottom: 1.5em;
+    }
+
+    .map-container {
+      width: 85%;
+    }
+
+    .about-content {
+      font-size: 1rem;
+      padding: 0 3em;
+    }
+  }
+}

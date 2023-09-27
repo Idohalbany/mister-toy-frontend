@@ -47,7 +47,7 @@ export function About() {
   return (
     <div className='about-us'>
       <div>
-        <h1 style={{ textAlign: 'center', margin: '40px' }}>Shop branches</h1>
+        <h1 style={{ textAlign: 'center' }}>Shop branches</h1>
 
         <div style={{ marginBottom: '20px' }}>
           {data.map((branch) => (
@@ -57,7 +57,7 @@ export function About() {
           ))}
         </div>
 
-        <div style={{ height: '70vh', width: '90%', margin: 'auto' }}>
+        <div className='map-container' style={{ height: '50vh', margin: 'auto' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyA5YAKbctMWmj2etXv-KY7MSXDMGaWr0qs' }}
             center={center}
@@ -68,7 +68,7 @@ export function About() {
           </GoogleMapReact>
         </div>
       </div>
-      <h1>About Us</h1>
+      <h1 className='title-content-about'>About Us</h1>
       <p className='about-content'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptate atque doloremque
         ipsam non maxime distinctio consequuntur saepe harum eum dicta incidunt, alias earum? Dicta

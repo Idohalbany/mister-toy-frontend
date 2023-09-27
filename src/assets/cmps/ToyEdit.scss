@@ -1,0 +1,43 @@
+.toy-edit-container {
+  color: $clr3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+  font-size: 1.2rem;
+  gap: 1em;
+  margin: auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      padding: 0.5em 2em;
+      border: 1px solid gray;
+      border-radius: 3px;
+    }
+
+    button[type='submit'] {
+      background-color: $clr1;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    background-color: $clr1;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

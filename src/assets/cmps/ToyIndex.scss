@@ -1,0 +1,18 @@
+.toys-app {
+  color: $clr3;
+  max-width: 60vw;
+  margin: auto;
+  h3 {
+    font-size: 2.5em;
+    margin: 3em auto 2em;
+  }
+
+  .add-toy-btn {
+    background-color: $clr1;
+    border: none;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+  }
+}

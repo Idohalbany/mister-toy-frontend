@@ -1,0 +1,23 @@
+.toy-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1em;
+  }
+
+  a {
+    color: $clr3;
+    background-color: $clr1;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+  }
+}

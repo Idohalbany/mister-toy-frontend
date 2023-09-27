@@ -1,10 +1,11 @@
 .home-page {
   color: $clr3;
   text-align: center;
-  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
   flex-direction: column;
-  margin: 10em auto;
 }
 
 .hero-section {
@@ -21,8 +22,8 @@
 .features-section {
   display: flex;
   justify-content: center;
-  padding: 3em;
-  margin: 2em 0em;
+  padding: 2em;
+  margin: 1em 0em;
   gap: 2em;
   font-size: 1rem;
 
@@ -68,5 +69,62 @@
 
   p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 3em;
+    }
+  }
+
+  .features-section {
+    flex-direction: column;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+
+    .feature {
+      padding: 0.5em;
+      border: none;
+      background-color: transparent;
+      color: $clr3;
+    }
+  }
+
+  .label-section {
+    padding: 0em;
+    h2 {
+      font-size: 2.2rem;
+      margin: 1em auto;
+    }
+  }
+
+  .labels-list {
+    gap: 0.5em;
+    margin: 0em;
+
+    .label-item {
+      padding: 0.5em 1em;
+      font-size: 0.9rem;
+    }
+  }
+
+  .cta-section {
+    h2 {
+      font-size: 2.2rem;
+      margin: 1em;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 }

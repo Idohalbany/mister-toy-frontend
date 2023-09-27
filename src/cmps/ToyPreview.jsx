@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function ToyPreview({ toy }) {
   return (
-    <article>
+    <article className='toy-preview'>
       <h1>🧸</h1>
       <h2>{toy.name}</h2>
       <p>

@@ -32,3 +32,10 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1em;
+  }
+}

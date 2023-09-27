@@ -1,0 +1,13 @@
+.toy-filter {
+  background-color: $clr1;
+  padding: 1em;
+  border-radius: 5px;
+  .main-toy-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .error {
+    color: red;
+  }
+}

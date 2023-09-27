@@ -54,8 +54,10 @@ export function ToyChart() {
   }
 
   return (
-    <div className='toy-chart'>
-      <PolarArea data={data} />
+    <div className='toy-chart-container'>
+      <div className='toy-chart'>
+        <PolarArea data={data} />
+      </div>
     </div>
   )
 }
