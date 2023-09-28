@@ -27,7 +27,7 @@ export function ToyIndex() {
         showSuccessMsg(`Toy added (id: ${savedToy._id})`)
       })
       .catch((err) => {
-        showErrorMsg('Cannot add toy')
+        showErrorMsg('Cannot add toy', err)
       })
   }
 
