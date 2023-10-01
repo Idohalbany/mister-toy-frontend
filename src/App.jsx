@@ -8,6 +8,7 @@ import { ToyIndex } from './pages/ToyIndex'
 import { ToyDetails } from './pages/ToyDetails'
 import { ToyEdit } from './pages/ToyEdit'
 import { Dashboard } from './pages/Dashboard'
+import { UserDetails } from './pages/UserDetails'
 import './assets/App.scss'
 
 export function App() {
@@ -24,6 +25,7 @@ export function App() {
               <Route element={<ToyIndex />} path='/toy' />
               <Route element={<ToyDetails />} path='/toy/:_id' />
               <Route element={<ToyEdit />} path='/toy/edit/:_id' />
+              <Route element={<UserDetails />} path='/user/:userId' />
             </Routes>
           </main>
         </section>
