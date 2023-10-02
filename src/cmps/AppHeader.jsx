@@ -36,30 +36,53 @@ export function AppHeader() {
 
   return (
     <header className='app-header'>
-      <div className='logo'>
-        <Link to={'/toy'}>MisterToy</Link>
+      <div className='container'>
+        <div className='logo'>
+          <Link to='/toy'>MisterToy</Link>
+        </div>
+        <nav className='main-nav'>
+          <ul>
+            <li>
+              <NavLink to='/'>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='/toy'>Toys</NavLink>
+            </li>
+            <li>
+              <NavLink to='/dashboard'>Dashboard</NavLink>
+            </li>
+            <li>
+              <NavLink to='/about'>About</NavLink>
+            </li>
+            <li>
+              <NavLink to='/chat'>Chat</NavLink>
+            </li>
+            <li>
+              <NavLink to='/review'>Review</NavLink>
+            </li>
+            {user && (
+              <li>
+                <NavLink to={`/admin/${user._id}`}>Profile</NavLink>
+              </li>
+            )}
+          </ul>
+        </nav>
+        <div className='user-info-wrapper'>
+          {user ? (
+            <span className='user-info logged-in'>
+              <div className='user-detail'>
+                {user.imgUrl && <img src={user.imgUrl} />}
+                {user.fullname}
+              </div>
+              <button onClick={onLogout}>Logout</button>
+            </span>
+          ) : (
+            <section className='user-info logged-out'>
+              <LoginSignup onLogin={onLogin} onSignup={onSignup} />
+            </section>
+          )}
+        </div>
       </div>
-      <nav className='main-nav'>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/toy'>Toys</NavLink>
-        <NavLink to='/dashboard'>Dashboard</NavLink>
-        <NavLink to='/about'>About</NavLink>
-        {user && <NavLink to={`/admin/${user._id}`}>Profile</NavLink>}
-      </nav>
-      {user && (
-        <span className='user-info'>
-          <div>
-            {user.imgUrl && <img src={user.imgUrl} />}
-            {user.fullname}
-          </div>
-          <button onClick={onLogout}>Logout</button>
-        </span>
-      )}
-      {!user && (
-        <section className='user-info'>
-          <LoginSignup onLogin={onLogin} onSignup={onSignup} />
-        </section>
-      )}
     </header>
   )
 }

@@ -8,9 +8,7 @@
   text-align: center;
   text-transform: capitalize;
   div h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 3em auto 1.5em;
+    font-size: 2rem;
   }
 
   button {
@@ -19,7 +17,7 @@
     border-radius: 0.5rem;
     background-color: $clr1;
     color: $clr3;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
@@ -30,12 +28,13 @@
   }
 
   .title-content-about {
-    margin-top: 1.5em;
+    margin-top: 1em;
+    font-size: 1rem;
   }
 
   .about-content {
     font-size: 1.1rem;
-    padding: 1em;
+    padding: 0.5em;
   }
 
   @media screen and (max-width: 768px) {
@@ -46,7 +45,7 @@
     }
 
     div button {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       margin-bottom: 1.5em;
     }
 
@@ -58,5 +57,10 @@
       font-size: 1rem;
       padding: 0 3em;
     }
+  }
+
+  .title-content-about {
+    margin: 1em;
+    font-size: 1.5rem;
   }
 }

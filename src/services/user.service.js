@@ -86,7 +86,7 @@ function saveLocalUser(user) {
 
 async function logout() {
   sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
-  return await httpService.post('auth/logout')
+  return httpService.post('auth/logout')
 }
 
 function getLoggedinUser() {

@@ -22,21 +22,20 @@ export function LoginSignup(props) {
   }
 
   function handleChange(ev) {
-    ev.preventDefault()
     const field = ev.target.name
     const value = ev.target.value
     setCredentials({ ...credentials, [field]: value })
   }
 
-  function onLogin(ev) {
-    ev.preventDefault()
+  function onLogin(ev = null) {
+    if (ev) ev.preventDefault()
     if (!credentials.username) return
     props.onLogin(credentials)
     clearState()
   }
 
-  function onSignup(ev) {
-    ev.preventDefault()
+  function onSignup(ev = null) {
+    if (ev) ev.preventDefault()
     if (!credentials.username || !credentials.password || !credentials.fullname) return
     props.onSignup(credentials)
     clearState()
@@ -52,55 +51,71 @@ export function LoginSignup(props) {
 
   return (
     <div className='login-page'>
-      <p>
-        <button className='btn-link' onClick={toggleSignup}>
-          {!isSignup ? 'Signup' : 'Login'}
-        </button>
-      </p>
-      {!isSignup && (
-        <form className='login-form' onSubmit={onLogin}>
-          <select name='username' value={credentials.username} onChange={handleChange}>
-            <option value=''>Select User</option>
-            {users.map((user) => (
-              <option key={user._id} value={user.username}>
-                {user.fullname}
-              </option>
-            ))}
-          </select>
-          <button>Login!</button>
-        </form>
-      )}
-      <div className='signup-section'>
-        {isSignup && (
+      <div className='form-section'>
+        {!isSignup ? (
+          <form className='login-form' onSubmit={onLogin}>
+            <div className='form-group'>
+              <select
+                className='form-control'
+                name='username'
+                value={credentials.username}
+                onChange={handleChange}>
+                <option value=''>Select User</option>
+                {users.map((user) => (
+                  <option key={user._id} value={user.username}>
+                    {user.fullname}
+                  </option>
+                ))}
+              </select>
+              <button className='login-button'>Login!</button>
+            </div>
+          </form>
+        ) : (
           <form className='signup-form' onSubmit={onSignup}>
-            <input
-              type='text'
-              name='fullname'
-              value={credentials.fullname}
-              placeholder='Fullname'
-              onChange={handleChange}
-              required
-            />
-            <input
-              type='text'
-              name='username'
-              value={credentials.username}
-              placeholder='Username'
-              onChange={handleChange}
-              required
-            />
-            <input
-              type='password'
-              name='password'
-              value={credentials.password}
-              placeholder='Password'
-              onChange={handleChange}
-              required
-            />
-            <ImgUploader onUploaded={onUploaded} />
-            <button>Signup!</button>
+            <div className='form-group'>
+              <input
+                className='form-control'
+                type='text'
+                name='fullname'
+                value={credentials.fullname}
+                placeholder='Fullname'
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                className='form-control'
+                type='text'
+                name='username'
+                value={credentials.username}
+                placeholder='Username'
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                className='form-control'
+                type='password'
+                name='password'
+                value={credentials.password}
+                placeholder='Password'
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <ImgUploader className='img-uploader' onUploaded={onUploaded} />
+            </div>
+            <button className='signup-button'>Signup!</button>
           </form>
         )}
+        <div className='toggle-section'>
+          <button className='toggle-button' onClick={toggleSignup}>
+            {!isSignup ? 'Signup' : 'Login'}
+          </button>
+        </div>
       </div>
     </div>
   )

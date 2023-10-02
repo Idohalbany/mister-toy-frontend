@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: center;
   gap: 1.5em;
+  border: 1px solid $clr3;
+  padding: 3em;
+
   h1 {
     font-size: 3em;
   }
+
   h2 {
     font-size: 1.5em;
   }
+
   p {
     font-size: 1em;
   }

@@ -8,7 +8,9 @@ import { ToyIndex } from './pages/ToyIndex'
 import { ToyDetails } from './pages/ToyDetails'
 import { ToyEdit } from './pages/ToyEdit'
 import { Dashboard } from './pages/Dashboard'
-import { AdminApp } from './cmps/AdminApp'
+import { AdminIndex } from './pages/AdminIndex'
+import { ChatApp } from './pages/Chat'
+import { ReviewIndex } from './pages/ReviewIndex'
 import './assets/App.scss'
 
 export function App() {
@@ -25,7 +27,9 @@ export function App() {
               <Route element={<ToyIndex />} path='/toy' />
               <Route element={<ToyDetails />} path='/toy/:_id' />
               <Route element={<ToyEdit />} path='/toy/edit/:_id' />
-              <Route element={<AdminApp />} path='admin/:_id' />
+              <Route element={<AdminIndex />} path='/admin/:_id' />
+              <Route element={<ReviewIndex />} path='/review' />
+              <Route element={<ChatApp />} path='/chat' />
             </Routes>
           </main>
         </section>

@@ -39,8 +39,6 @@ export function saveToy(toy) {
   return toyService
     .save(toy)
     .then((savedToy) => {
-      console.log('saveToy got toy from service:', savedToy)
-      console.log('Toy saved:', savedToy)
       store.dispatch({ type, toy: savedToy })
       return savedToy
     })

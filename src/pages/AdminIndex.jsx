@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { loadUsers, removeUser } from '../store/actions/user.action.js'
+import { loadUsers, removeUser } from '../store/actions/user.action'
 
-export function AdminApp() {
+export function AdminIndex() {
   const users = useSelector((storeState) => storeState.userModule.users)
   const isLoading = useSelector((storeState) => storeState.userModule.isLoading)
 
